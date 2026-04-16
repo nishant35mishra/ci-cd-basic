@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x]   # Test on two Node versions
+        node-version: [18.x, 20.x]
 
     steps:
       - name: Checkout code
@@ -22,10 +22,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'                  # This speeds up future runs
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci                     # Faster and cleaner than npm install
+        run: npm ci
 
       - name: Run tests
         run: npm test
