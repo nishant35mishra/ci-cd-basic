@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get('/', (req,res)=>{
-    res.json({message:'Hello World! My first Node.js CI/CD project 🚀'});
+    res.json({message:'Hello from CI/CD Pipeline - Test Successful! 🎉'});
 })  ;
 
 app.get('/health', (req,res)=>{
