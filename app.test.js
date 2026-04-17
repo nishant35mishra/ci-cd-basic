@@ -1,7 +1,8 @@
 const request = require('supertest');
 const app = require('./index');
 
-test('GET / should return hello world', async () => {
+describe('Basic API Tests', () => {
+  test('GET / should return hello world', async () => {
   const res = await request(app).get('/');
   expect(res.statusCode).toBe(200);
   expect(res.body.message).toContain('CI/CD Pipeline');   // Updated
